@@ -18,7 +18,7 @@
 ## Logistics
 Group meeting on Wednesdays at 5PM.
 
-## General To-Do List for RAPT
+## General To-Do List for User Modeling and Memory
 
 ### Priority 1
 
