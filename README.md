@@ -1,10 +1,10 @@
 # User Modeling and Memory
 |Milestone|Planning|In-Progress|Finished|
 |:--------|:------:|:---------:|:------:|
-|Lit Review                         |/| | | |
-|[Human-Agent Rapport Building](#)                         | | | | |
-|[User Modeling and Memory](#)                             | | | | |
-|[Virtual Agent Dialogue Authoring](#)                     | | | | |
+|Lit Review                               |/| | | |
+|Method Planning                          | | | | |
+|Data Analysis                            | | | | |
+|Final Report                             | | | | |
 
 ## Logistics
 Group meeting on Wednesdays at 5PM.
