@@ -1,10 +1,14 @@
 # User Modeling and Memory
+
+## Major Milestones
 |Milestone|Planning|In-Progress|Finished|
 |:--------|:------:|:---------:|:------:|
 |Lit Review                               |/| | | |
 |Method Planning                          | | | | |
 |Data Analysis                            | | | | |
 |Final Report                             | | | | |
+
+## Breakdown
 
 ## Logistics
 Group meeting on Wednesdays at 5PM.
