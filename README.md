@@ -24,5 +24,8 @@ Group meeting on Wednesdays at 5PM.
 ## General To-Do List for User Modeling and Memory
 
 ### Priority 1
+- Read papers
+- Think of large research questions
 
 ### Priority 2
+- Start making an outline for lit review
