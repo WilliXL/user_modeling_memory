@@ -21,10 +21,11 @@ Would be interesting to combine with Rishabh to create changing animations in th
 ### Research Questions
 __1. When to collect user data__
   - Personality recognition, especially in the five major categories are best collected during the first interaction. Especially when there is anxiety and stress [2,3].
-2. What to collect
+__2. What to collect__
 
 ## Logistics
-Group meeting on Wednesdays at 5PM.
+- Individual meeting with Michael on Wednesdays at 4:15PM
+- Group meeting on Wednesdays at 5PM.
 
 ## General To-Do List for User Modeling and Memory
 
