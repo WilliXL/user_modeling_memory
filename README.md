@@ -54,6 +54,8 @@ __5. How to store all of the information?__
 __6. When to use the information?__
 
 __7. How to use the information?__
+- Ranking Advisor [7]
+  
 
 ## Logistics
 - Individual meeting with Michael on Wednesdays at 4:15PM
