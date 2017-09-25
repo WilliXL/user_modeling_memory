@@ -24,7 +24,7 @@ Would be interesting to combine with Rishabh to create changing animations in th
 - [6] Baker, R., Corbett, a., Koedinger, K., & Roll, I. (2005). Detecting when students game the system, across tutor subjects and classroom cohorts. User Modeling 2005, 150–150.
   > Students who don't actually want to learn and want to "game the system" could be dealt with differently in terms of what their goal is.
 - [7] Carberry, S., Chu-Carroll, J., & Elzer, S. (1999). Constructing and Utilizing a Model of User Preferences in Collaborative Consultation Dialogues. Computational Intelligence, 15(3), 185–217.
-  > Similar to using goals and plans [5] except that users not conscious of their preferences, unlike their goals. Could be stored the same way as goals. Dialogue affected by goals/plans as well as preferences seem like they will take on similar external features.
+  > Similar to using goals and plans [5] except that users not conscious of their preferences, unlike their goals. Could be stored the same way as goals. Dialogue affected by goals/plans as well as preferences seem like they will take on similar external features. Expands upon van Beek [5] with weights for preferences as well.
 
 ### Research Questions
 __1. When to collect user data?__
