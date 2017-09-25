@@ -40,7 +40,8 @@ __3. Can "skill level in system" be an analogue to "confidence in system"?__
 __4. How to collect?__
 - Goals and plans
   - Could be inferred simply from the task at hand in terms of simply what algebra concept the student is trying to learn. But could also incorporate whether or not the student actually wants to learn or not, which can be inferred from how often and much they are trying to Game-HURT the system [6].
-  - Another goal could be attaining higher rapport ratings, up until a certain threshold maybe? (ie. while rapport < max_rapport / 2)
+  - At a more granular, the goal would be to solve the problem. And the agent could explain why solving the problem a certain way or why the incorrect method is a direct influence on the user's higher domain goal (ie. learn algebra) [5,6].
+  - Another goal could be attaining higher rapport ratings, up until a certain threshold maybe? (ie. if beginning_rapport < max_rapport / 2)
 
 __5. How to store all of the information?__
 
