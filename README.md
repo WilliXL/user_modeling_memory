@@ -20,9 +20,12 @@ Would be interesting to combine with Rishabh to create changing animations in th
 
 ### Research Questions
 __1. When to collect user data__
-  - Personality recognition, especially in the five major categories are best collected during the first interaction. Especially when there is anxiety and stress [1,2].
+- Personality recognition, especially in the five major categories are best collected during the first interaction. Especially when there is anxiety and stress [1,2].
   
 __2. What to collect__
+
+__3. Can "skill level in system" be an analogue to "confidence in system"?__
+- Talk to Rae about this.
 
 ## Logistics
 - Individual meeting with Michael on Wednesdays at 4:15PM
