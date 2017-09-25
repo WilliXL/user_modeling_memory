@@ -38,7 +38,8 @@ __3. Can "skill level in system" be an analogue to "confidence in system"?__
 - Talk to Rae about this.
 
 __4. How to collect?__
-- Goals and plans could be inferred simply from the task at hand in terms of simply what algebra concept the student is trying to learn. But could also incorporate whether or not the student actually wants to learn or not, which can be inferred from how often and much they are trying to Game-HURT the system [6].
+- Goals and plans
+  - Could be inferred simply from the task at hand in terms of simply what algebra concept the student is trying to learn. But could also incorporate whether or not the student actually wants to learn or not, which can be inferred from how often and much they are trying to Game-HURT the system [6].
 
 __5. How to store all of the information?__
 
