@@ -17,12 +17,16 @@ Papers:
 - [3] Schulman, D., & Bickmore, T. (2012). Changes in verbal and nonverbal conversational behavior in long-term interaction. Proceedings of the 14th ACM International Conference on Multimodal Interaction - ICMI ’12, 11.
   > Looks at how nonverbal behavior changes as a function of time/rapport.
 Would be interesting to combine with Rishabh to create changing animations in the virtual agent.
+- [4] Komatani, K., Ueno, S., Kawahara, T., & Okuno, H. G. (2003). Flexible Guidance Generation using User Model in Spoken Dialogue Systems, (July), 256–263.
+  > Looks at the dimensions of what to collect about a user. In this case it's a virtual, dialogue-based assistant for navigating Kyoto's bus system.
 
 ### Research Questions
 __1. When to collect user data__
 - Personality recognition, especially in the five major categories are best collected during the first interaction. Especially when there is anxiety and stress [1,2].
   
 __2. What to collect__
+- Potential dimensions of what to store?
+  - Skill level to the system =?= confidence in the system, knowledge of the target domain (algebra), ~degree of hastiness~, rapport (?) [4].
 
 __3. Can "skill level in system" be an analogue to "confidence in system"?__
 - Talk to Rae about this.
