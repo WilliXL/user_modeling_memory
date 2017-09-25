@@ -23,6 +23,8 @@ Would be interesting to combine with Rishabh to create changing animations in th
   > Looks at how to use the goal and plans (in the long term) of the user should influence the explanation that a system output. Could be interesting collaboration with on-the-fly dialogue generation. But how would goals be inferred/stored?
 - [6] Baker, R., Corbett, a., Koedinger, K., & Roll, I. (2005). Detecting when students game the system, across tutor subjects and classroom cohorts. User Modeling 2005, 150–150.
   > Students who don't actually want to learn and want to "game the system" could be dealt with differently in terms of what their goal is.
+- [7] Carberry, S., Chu-Carroll, J., & Elzer, S. (1999). Constructing and Utilizing a Model of User Preferences in Collaborative Consultation Dialogues. Computational Intelligence, 15(3), 185–217.
+  > Similar to using goals and plans [5] except that users not conscious of their preferences, unlike their goals. Could be stored the same way as goals. Dialogue affected by goals/plans as well as preferences seem like they will take on similar external features.
 
 ### Research Questions
 __1. When to collect user data?__
@@ -32,7 +34,7 @@ __2. What to collect?__
 - Potential dimensions of what to store?
   - Skill level to the system =?= confidence in the system, knowledge of the target domain (algebra), ~degree of hastiness~, rapport (?) [4].
   - The five major personality categories: Extraversion, Neuroticism, Agreeableness, Conscientiousness, Openness to Experience [1,2].
-  - Goals and plans of the user [5].
+  - Goals and plans of the user [5]. As well as preferences [7].
 
 __3. Can "skill level in system" be an analogue to "confidence in system"?__
 - Talk to Rae about this.
