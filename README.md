@@ -19,18 +19,29 @@ Papers:
 Would be interesting to combine with Rishabh to create changing animations in the virtual agent.
 - [4] Komatani, K., Ueno, S., Kawahara, T., & Okuno, H. G. (2003). Flexible Guidance Generation using User Model in Spoken Dialogue Systems, (July), 256–263.
   > Looks at the dimensions of what to collect about a user. In this case it's a virtual, dialogue-based assistant for navigating Kyoto's bus system.
+- [5] van Beek, P. (1987). A model for generating better explanations. Proceedings of the 25th Annual Meeting on Association for Computational Linguistics -, 215–220.
+  > Looks at how to use the goal and plans (in the long term) of the user should influence the explanation that a system output. Could be interesting collaboration with on-the-fly dialogue generation. But how would goals be inferred/stored?
 
 ### Research Questions
-__1. When to collect user data__
+__1. When to collect user data?__
 - Personality recognition, especially in the five major categories are best collected during the first interaction. Especially when there is anxiety and stress [1,2].
   
-__2. What to collect__
+__2. What to collect?__
 - Potential dimensions of what to store?
   - Skill level to the system =?= confidence in the system, knowledge of the target domain (algebra), ~degree of hastiness~, rapport (?) [4].
   - The five major personality categories: Extraversion, Neuroticism, Agreeableness, Conscientiousness, Openness to Experience [1,2].
+  - Goals and plans of the user [5].
 
 __3. Can "skill level in system" be an analogue to "confidence in system"?__
 - Talk to Rae about this.
+
+__4. How to collect?__
+
+__5. How to store all of the information?__
+
+__6. When to use the information?__
+
+__7. How to use the information?__
 
 ## Logistics
 - Individual meeting with Michael on Wednesdays at 4:15PM
