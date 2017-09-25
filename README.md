@@ -21,6 +21,8 @@ Would be interesting to combine with Rishabh to create changing animations in th
   > Looks at the dimensions of what to collect about a user. In this case it's a virtual, dialogue-based assistant for navigating Kyoto's bus system.
 - [5] van Beek, P. (1987). A model for generating better explanations. Proceedings of the 25th Annual Meeting on Association for Computational Linguistics -, 215–220.
   > Looks at how to use the goal and plans (in the long term) of the user should influence the explanation that a system output. Could be interesting collaboration with on-the-fly dialogue generation. But how would goals be inferred/stored?
+- [6] Baker, R., Corbett, a., Koedinger, K., & Roll, I. (2005). Detecting when students game the system, across tutor subjects and classroom cohorts. User Modeling 2005, 150–150.
+  > Students who don't actually want to learn and want to "game the system" could be dealt with differently in terms of what their goal is.
 
 ### Research Questions
 __1. When to collect user data?__
@@ -36,6 +38,7 @@ __3. Can "skill level in system" be an analogue to "confidence in system"?__
 - Talk to Rae about this.
 
 __4. How to collect?__
+- Goals and plans could be inferred simply from the task at hand in terms of simply what algebra concept the student is trying to learn. But could also incorporate whether or not the student actually wants to learn or not, which can be inferred from how often and much they are trying to Game-HURT the system [6].
 
 __5. How to store all of the information?__
 
