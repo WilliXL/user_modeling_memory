@@ -27,6 +27,7 @@ __1. When to collect user data__
 __2. What to collect__
 - Potential dimensions of what to store?
   - Skill level to the system =?= confidence in the system, knowledge of the target domain (algebra), ~degree of hastiness~, rapport (?) [4].
+  - The five major personality categories: Extraversion, Neuroticism, Agreeableness, Conscientiousness, Openness to Experience [1,2].
 
 __3. Can "skill level in system" be an analogue to "confidence in system"?__
 - Talk to Rae about this.
