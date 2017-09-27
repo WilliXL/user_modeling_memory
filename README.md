@@ -27,10 +27,16 @@ Would be interesting to combine with Rishabh to create changing animations in th
   > Similar to using goals and plans [5] except that users not conscious of their preferences, unlike their goals. Could be stored the same way as goals. Dialogue affected by goals/plans as well as preferences seem like they will take on similar external features. Expands upon van Beek [5] with weights for preferences as well.
 - [8] Kass, R., & Finin, T. (1988). MODELING THE USER IN NATURAL LANGUAGE SYSTEMS Robert Kass and Tim Finin, 14(3).
   > Good base knowledge and specs for what a "user model" should be.
+- [9] Kobsa, A., & Wahlster, W. (1989). User Models in Dialog Systems.
+- [10] Kobsa, A. (1990). User modeling in dialog systems: Potentials and hazards. AI & Society, 4(3), 214–231.
 
 ### Research Questions
+__0. What is a "User Model"?__
+- A user model is the knowledge about the user, either explicitly or implicitly encoded, that is used by the system to improve the interaction [8].
+
 __1. When to collect user data?__
 - Personality recognition, especially in the five major categories are best collected during the first interaction. Especially when there is anxiety and stress [1,2].
+- After self-disclosure prompts littered throughout trial.
   
 __2. What to collect?__
 - Potential dimensions of what to store?
@@ -52,6 +58,7 @@ __4. How to collect?__
   - Q&A
 
 __5. How to store all of the information?__
+- From the highest level down, definitely there should be a distinction between user goals/preferences/personality and responses generated from algebra problem solving aspect.
 
 __6. When to use the information?__
 
