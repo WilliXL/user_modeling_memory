@@ -32,7 +32,8 @@ Would be interesting to combine with Rishabh to create changing animations in th
 
 ### Research Questions
 __0. What is a "User Model"?__
-- A user model is the knowledge about the user, either explicitly or implicitly encoded, that is used by the system to improve the interaction [8].
+- "A user model is the knowledge about the user, either explicitly or implicitly encoded, that is used by the system to improve the interaction" [8].
+  - "This definition is at once too strong and too weak. The definition is too strong in that it limits the range of modeling a natural language system might do to the user of the system only. Many situations require a natural language system to deal with several models concur- rently, as will be demonstrated later in this paper. The definition is too weak since it endows every interactive system with some kind of user model, usually of the implicit variety. The following paragraphs clarify these issues, and in so doing restrict the class of models to be considered" [8].
 
 __1. When to collect user data?__
 - Personality recognition, especially in the five major categories are best collected during the first interaction. Especially when there is anxiety and stress [1,2].
