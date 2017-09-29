@@ -3,7 +3,7 @@
 ## Major Milestones
 |Milestone|Planning|In-Progress|Finished|
 |:--------|:------:|:---------:|:------:|
-|Lit Review                               |/| | | |
+|[Lit Review](https://cmu.box.com/s/v9noffkys5u9ub7r70inrnjpspc2sj2x) |/| | | |
 |Method Planning                          | | | | |
 |Data Analysis                            | | | | |
 |Final Report                             | | | | |
