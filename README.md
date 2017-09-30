@@ -70,7 +70,7 @@ __7. How to use the information?__
 
 ### Research Questions
 -	How often should the RAPT user model be updated and how quickly show the influences of those changes propagate through the system for the most increase in rapport and maintain rapport longitudinally across trials?
-  
+-	Would intra-session changes from user model influence elicit higher rapport or inter-session changes?
 
 ## Logistics
 - Individual meeting with Michael on Wednesdays at 4:15PM
