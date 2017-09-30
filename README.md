@@ -30,7 +30,7 @@ Would be interesting to combine with Rishabh to create changing animations in th
 - [9] Kobsa, A., & Wahlster, W. (1989). User Models in Dialog Systems.
 - [10] Kobsa, A. (1990). User modeling in dialog systems: Potentials and hazards. AI & Society, 4(3), 214–231.
 
-### Research Questions
+### Base Questions
 __0. What is a "User Model"?__
 - "A user model is the knowledge about the user, either explicitly or implicitly encoded, that is used by the system to improve the interaction" [8].
   - "This definition is at once too strong and too weak. The definition is too strong in that it limits the range of modeling a natural language system might do to the user of the system only. Many situations require a natural language system to deal with several models concur- rently, as will be demonstrated later in this paper. The definition is too weak since it endows every interactive system with some kind of user model, usually of the implicit variety. The following paragraphs clarify these issues, and in so doing restrict the class of models to be considered" [8].
@@ -65,6 +65,9 @@ __6. When to use the information?__
 
 __7. How to use the information?__
 - Ranking Advisor [7]
+
+### Research Questions
+-	How often should the RAPT user model be updated and how quickly show the influences of those changes propagate through the system for the most increase in rapport and maintain rapport longitudinally across trials?
   
 
 ## Logistics
