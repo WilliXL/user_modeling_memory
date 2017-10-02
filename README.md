@@ -31,6 +31,8 @@ Would be interesting to combine with Rishabh to create changing animations in th
 - [10] Kobsa, A. (1990). User modeling in dialog systems: Potentials and hazards. AI & Society, 4(3), 214–231.
 - [11] Iio, T., Shiomi, M., Shinozawa, K., Shimohara, K., Miki, M., & Hagita, N. (2015). Lexical Entrainment in Human Robot Interaction: Do Humans Use Their Vocabulary to Robots? International Journal of Social Robotics, 7(2), 253–263.
 - [12] Kanashiro, I., Kobayashi, K., & Kitamura, Y. (2009). Entrainment in human-agent text communication. Lecture Notes in Computer Science (Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics), 5044 LNAI, 268–277.
+- [13] Madaio, M., Lasko, R., Ogan, A., & Cassell, J. Using Temporal Association Rule Mining to Predict Dyadic Rapport in Peer Tutoring.
+- [14] Sinha T, Cassell J. We click, we align, we learn: Impact of influence and convergence processes on student learning and rapport building. In Proceedings of the 1st Workshop on Modeling INTERPERsonal SynchrONy And infLuence 2015 Nov 13 (pp. 13-20). ACM. 
 
 ### Base Questions
 __0. What is a "User Model"?__
