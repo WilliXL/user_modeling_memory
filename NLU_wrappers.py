@@ -27,8 +27,8 @@ def text_entities(text):
     entities = client.analyze_entities(document).entities
     entity_type = ('UNKNOWN', 'PERSON', 'LOCATION', 'ORGANIZATION',
                    'EVENT', 'WORK_OF_ART', 'CONSUMER_GOOD', 'OTHER')
-    entity_list = dict()
+    entity_list = []
 
     for entity in entities:
-        entity_list[entity.name] = (entity_type[entity.type], entity.salience)
+        entity_list.append((entity.name, entity_type[entity.type], entity.salience))
     return entity_list

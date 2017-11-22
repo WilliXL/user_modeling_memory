@@ -1,7 +1,18 @@
 import random
 from NLU_wrappers import *
+import pandas as pd
+import os
+import time # to log when things are said
 
 # prefilled "database"
+
+
+def get_sentences(sentence_type, sentence_df):
+    ret_list = []
+    for row in range(len(sentence_df)):
+        if list(sentence_df['type'])[row] == sentence_type:
+            ret_list.append(list(sentence_df['sentence'])[row])
+    return ret_list
 
 def get_user_speech():
     s = input('The user says: ')
@@ -26,41 +37,6 @@ def count_insertions(sentence):
             count += 1
     return count
 
-RSE_sentences_ON_pos = [
-    "Wow, you've gotten a lot ^ at ^!",
-    "Remember when you were ^ at ^?",
-    "You've really improved at ^.",
-    "You really understand ^ now, huh?"
-    ]
-
-RSE_sentences_ON_neg = [
-    "I know you can do better.",
-    "You still don't understand?",
-    "You understood ^ last time."
-    ]
-
-prompt_sentences = [
-    "So how was ^?",
-    "What'd you do after last session?"
-    ]
-
-prompt_followups = [
-    "How'd it go?",
-    "Did you have fun?",
-    "I wish I could've been there!"
-    ]
-
-SD_sentence_AGREEMENT = [
-    "I like it too!",
-    "I agree.",
-    "Yeah! Me too!"
-    ]
-
-SD_sentence_DISAGREEMENT = [
-    "Darn, I like ^.",
-    "I'm the opposite, I actually like ^."
-    ]
-
 mastery = [
 
     [0.8,10], # KC 1
@@ -80,7 +56,7 @@ mastery = [
 
     ]
 
-# reference_element = (valence, context, rapport)
+# reference_element = (sentiment, entity, rapport, time)
 
 student_references = {
 
@@ -182,3 +158,44 @@ def prompt_SD(tag):
 def follow_up():
     sentence = random.choice(prompt_followups)
     return sentence
+
+def highest_salience(entity_list):
+    high_val = 0
+    index = 0
+    for entry in range(len(entity_list)):
+        if entity_list[entry][2] > high_val:
+            high_val = entity_list[entry][2]
+            index = entry
+    if len(entity_list) > 0:
+        return entity_list[index][0]
+
+def append_to_user(entity, sentiment, delta_rapport, user_df):
+    if entity in list(user_df['topic']):
+
+    user_df.loc[len(user_df)] = [entity, sentiment, delta_rapport, time.time()]
+    return user_df
+
+def run():
+    # NOT SAFE: assuming that proper csv files already exist
+    sentence_df = pd.read_csv("sentences.csv")
+    user_df = pd.read_csv("user.csv")
+    agent_df = pd.read_csv("agent.csv")
+
+    # we have pre-filled data, now have conversation
+    
+    prompt_sentences = get_sentences("prompt_sentences",sentence_df)
+    prompt_sentence = random.choice(prompt_sentences)
+    print(prompt_sentence)
+    while True:
+        user_response = get_user_speech()
+        sentiment = text_sentiment(user_response)
+        entity_list = text_entities(user_response)
+        entity = highest_salience(entity_list)
+        print(entity)
+        delta_rapport = get_rapport_delta()
+        user_df = append_to_user(entity, sentiment, delta_rapport, user_df)
+        user_df.to_csv("user.csv")
+        user_df = pd.read_csv("user.csv")
+        followups = get_sentences("prompt_followups", sentence_df)
+        followup = random.choice(followups)
+        print(followup)
