@@ -171,8 +171,11 @@ def highest_salience(entity_list):
 
 def append_to_user(entity, sentiment, delta_rapport, user_df):
     if entity in list(user_df['topic']):
-
-    user_df.loc[len(user_df)] = [entity, sentiment, delta_rapport, time.time()]
+        user_df = user_df[user_df['topic'] != entity] # deletes the line
+    print(entity, sentiment, delta_rapport)
+    temp_df = {'delta_rapport':[delta_rapport], 'sentiment':[sentiment], 'time':[time], 'topic':[entity]}
+    temp_df = pd.DataFrame(temp_df)
+    user_df = user_df.append(temp_df)
     return user_df
 
 def run():
@@ -191,6 +194,9 @@ def run():
         sentiment = text_sentiment(user_response)
         entity_list = text_entities(user_response)
         entity = highest_salience(entity_list)
+        print('^' in prompt_sentence or '^' in followup)
+        if '^' in prompt_sentence or '^' in followup:
+            entity = '^'
         print(entity)
         delta_rapport = get_rapport_delta()
         user_df = append_to_user(entity, sentiment, delta_rapport, user_df)
