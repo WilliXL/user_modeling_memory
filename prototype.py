@@ -6,6 +6,27 @@ import time # to log when things are said
 
 # prefilled "database"
 
+student_off_dict = {}
+student_on_dict = {}
+
+agent_off_dict = {}
+agent_on_dict = {}
+
+def append_student_off(entity, sentiment, delta_rapport):
+    if not entity in student_off_dict: # gotta first create the entry
+        student_off_dict[entity] = [[]]
+    student_off_dict[entity][0].append((sentiment,delta_rapport,time.time()))
+
+def dict_to_csv():
+    student_off = pd.DataFrame(student_off_dict)
+    student_on = pd.DataFrame(student_on_dict)
+    agent_off = pd.DataFrame(agent_off_dict)
+    agent_on = pd.DataFrame(agnet_on_dict)
+
+    student_off.to_csv('student_off.csv')
+    student_on.to_csv('student_on.csv')
+    agent_off.to_csv('agent_off.csv')
+    agent_off.to_csv('agent_on.csv')
 
 def get_sentences(sentence_type, sentence_df):
     ret_list = []
@@ -56,24 +77,6 @@ mastery = [
 
     ]
 
-# reference_element = (sentiment, entity, rapport, time)
-
-student_references = {
-
-    "soccer": [("pos", "NONE", 2),
-        ("pos", "soccer game", 1),
-        ("neg", "fouling", -1)],
-
-    "fractions": [("neg", "NONE", -3),
-        ("pos", "Question 3", 0),
-        ("neg", "Question 4", -1)],
-
-    }
-
-agent_references = {
-    "soccer": [("pos", "AGREEMENT", 1)]
-    # "fractions": [("pos", "DISAGREEMENT", 0)]
-    }
 
 def KC_num_str(KC):
     dictionary = {
@@ -178,6 +181,9 @@ def append_to_user(entity, sentiment, delta_rapport, user_df):
     user_df = user_df.append(temp_df)
     return user_df
 
+def get_turns():
+    return random.randint(0,3)
+
 def run():
     # NOT SAFE: assuming that proper csv files already exist
     sentence_df = pd.read_csv("sentences.csv")
@@ -190,18 +196,21 @@ def run():
     prompt_sentence = random.choice(prompt_sentences)
     print(prompt_sentence)
     while True:
-        user_response = get_user_speech()
-        sentiment = text_sentiment(user_response)
-        entity_list = text_entities(user_response)
-        entity = highest_salience(entity_list)
-        print('^' in prompt_sentence or '^' in followup)
-        if '^' in prompt_sentence or '^' in followup:
-            entity = '^'
-        print(entity)
-        delta_rapport = get_rapport_delta()
-        user_df = append_to_user(entity, sentiment, delta_rapport, user_df)
-        user_df.to_csv("user.csv")
-        user_df = pd.read_csv("user.csv")
-        followups = get_sentences("prompt_followups", sentence_df)
-        followup = random.choice(followups)
-        print(followup)
+        for turn in range(get_turns()):
+            user_response = get_user_speech()
+            sentiment = text_sentiment(user_response)
+            entity_list = text_entities(user_response)
+            followups = get_sentences("prompt_followups", sentence_df)
+            followup = random.choice(followups)
+            if not 'it' in prompt_sentence or not 'it' in followup:
+                entity = highest_salience(entity_list)
+            if '^' in prompt_sentence:
+                entity = '^'
+            print(entity)
+            delta_rapport = get_rapport_delta()
+            user_df = append_to_user(entity, sentiment, delta_rapport, user_df)
+            user_df.to_csv("user.csv")
+            user_df = pd.read_csv("user.csv")
+            if '^' in followup:
+                entity = '^'
+            print(followup)
