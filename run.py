@@ -5,8 +5,8 @@ def run_student_new():
     # make sure that these CSV files already exist!!
     # else these operations are unsafe and will crash the program
     sentence_df = pd.read_csv('sentences.csv')
-    user_df = pd.read_csv('user.csv')
-    agent_df = pd.read_csv('agent.csv')
+    user_df = pd.read_csv('student_off.csv')
+    agent_df = pd.read_csv('agent_off.csv')
 
     memo = set()
     entity = ""
@@ -50,8 +50,8 @@ def run_student_returning():
     # make sure that these CSV files already exist!!
     # else these operations are unsafe and will crash the program
     sentence_df = pd.read_csv('sentences.csv')
-    user_df = pd.read_csv('user.csv')
-    agent_df = pd.read_csv('agent.csv')
+    user_df = pd.read_csv('student_off.csv')
+    agent_df = pd.read_csv('agent_off.csv')
 
     memo = set()
     entity = get_topic(user_df)

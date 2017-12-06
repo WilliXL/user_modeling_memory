@@ -12,7 +12,7 @@ student_on_dict = {}
 agent_off_dict = {}
 agent_on_dict = {}
 
-def get_topic(df):
+def get_topic(df,parameter='time'):
     topics = list(df)[1:]
     topic = random.choice(topics)
     while topic == 'None':
@@ -187,33 +187,3 @@ def highest_salience(entity_list):
 def get_turns():
     return random.randint(0,3)
 
-def run():
-    # NOT SAFE: assuming that proper csv files already exist
-    sentence_df = pd.read_csv("sentences.csv")
-    user_df = pd.read_csv("user.csv")
-    agent_df = pd.read_csv("agent.csv")
-
-    # we have pre-filled data, now have conversation
-    
-    prompt_sentences = get_sentences("prompt_sentences",sentence_df)
-    prompt_sentence = random.choice(prompt_sentences)
-    print(prompt_sentence)
-    while True:
-        for turn in range(get_turns()):
-            user_response = get_user_speech()
-            sentiment = text_sentiment(user_response)
-            entity_list = text_entities(user_response)
-            followups = get_sentences("prompt_followups", sentence_df)
-            followup = random.choice(followups)
-            if not 'it' in prompt_sentence or not 'it' in followup:
-                entity = highest_salience(entity_list)
-            if '^' in prompt_sentence:
-                entity = '^'
-            print(entity)
-            delta_rapport = get_rapport_delta()
-            user_df = append_to_user(entity, sentiment, delta_rapport, user_df)
-            user_df.to_csv("user.csv")
-            user_df = pd.read_csv("user.csv")
-            if '^' in followup:
-                entity = '^'
-            print(followup)
