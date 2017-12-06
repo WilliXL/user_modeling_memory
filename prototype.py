@@ -12,6 +12,18 @@ student_on_dict = {}
 agent_off_dict = {}
 agent_on_dict = {}
 
+def get_topic(df):
+    topics = list(df)[1:]
+    topic = random.choice(topics)
+    while topic == 'None':
+        topic = random.choice(topics)
+    return topic
+
+def insert_entity(sentence, entity):
+    if '^' in sentence:
+        sentence = sentence[:sentence.index('^')] + entity + sentence[sentence.index('^') + 1:]
+    return sentence
+
 def append_student_off(entity, sentiment, delta_rapport):
     if not entity in student_off_dict: # gotta first create the entry
         student_off_dict[entity] = [[]]
@@ -21,7 +33,7 @@ def dict_to_csv():
     student_off = pd.DataFrame(student_off_dict)
     student_on = pd.DataFrame(student_on_dict)
     agent_off = pd.DataFrame(agent_off_dict)
-    agent_on = pd.DataFrame(agnet_on_dict)
+    agent_on = pd.DataFrame(agent_on_dict)
 
     student_off.to_csv('student_off.csv')
     student_on.to_csv('student_on.csv')
@@ -171,15 +183,6 @@ def highest_salience(entity_list):
             index = entry
     if len(entity_list) > 0:
         return entity_list[index][0]
-
-def append_to_user(entity, sentiment, delta_rapport, user_df):
-    if entity in list(user_df['topic']):
-        user_df = user_df[user_df['topic'] != entity] # deletes the line
-    print(entity, sentiment, delta_rapport)
-    temp_df = {'delta_rapport':[delta_rapport], 'sentiment':[sentiment], 'time':[time], 'topic':[entity]}
-    temp_df = pd.DataFrame(temp_df)
-    user_df = user_df.append(temp_df)
-    return user_df
 
 def get_turns():
     return random.randint(0,3)
