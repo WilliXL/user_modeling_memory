@@ -85,5 +85,11 @@ def run_student_returning():
             user_df = append_student_off(entity, sentiment, delta_rapport)
             dict_to_csv()
 
-def run_student_on_task():
-    return None
+def run_recall_hint():
+    # make sure that these CSV files already exist!!
+    # else these operations are unsafe and will crash the program
+    sentence_df = pd.read_csv('sentences.csv')
+    user_df = pd.read_csv('student_on.csv')
+    agent_df = pd.read_csv('agent_on.csv')
+
+    
